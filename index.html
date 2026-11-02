@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KidsTube AI Studio</title><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar">
+    <div class="brand"><span class="logo">🎈</span><div><b>KidsTube</b><small>AI STUDIO</small></div></div>
+    <nav>
+      <button class="nav active" data-view="home">🏠 Dashboard</button>
+      <button class="nav" data-view="create">✨ Create a video</button>
+      <button class="nav" data-view="library">🎬 My videos</button>
+    </nav>
+    <div class="side-note"><span>🌟</span><b>Big ideas for little minds!</b><small>Make learning an adventure.</small></div>
+    <div class="profile"><div class="avatar">🧸</div><div><b>Creator Studio</b><small>Starter workspace</small></div></div>
+  </aside>
+  <main>
+    <header><div><small class="eyebrow">YOUR CREATIVE PLAYGROUND</small><h1 id="pageTitle">Hello, Creator! 👋</h1><p id="pageSub">Ready to make something magical?</p></div><button class="primary" id="topCreate">＋ New video</button></header>
+    <section id="homeView" class="view">
+      <div class="hero"><div><span class="tag">🎨 YOUR STORY STARTS HERE</span><h2>Turn little ideas<br>into <em>big adventures.</em></h2><p>Create playful stories that help children learn, imagine, and smile.</p><button class="white-btn" id="heroCreate">Create your first story →</button></div><div class="hero-art">🦊<span>🌈</span><i>⭐</i></div></div>
+      <div class="stats"><div class="stat"><span>📚</span><small>Stories created</small><b id="storyCount">0</b></div><div class="stat"><span>🎞️</span><small>Scenes planned</small><b id="sceneCount">0</b></div><div class="stat"><span>💡</span><small>Ideas to explore</small><b>∞</b></div></div>
+      <div class="section-head"><div><h3>Start creating</h3><p>Choose your next adventure.</p></div></div>
+      <div class="quick-grid"><button class="quick" data-topic="Animals learning to share"><span>🦁</span><b>Animal stories</b><small>Kindness & friendship</small></button><button class="quick" data-topic="Learn numbers 1 to 10"><span>🔢</span><b>Numbers</b><small>Count and discover</small></button><button class="quick" data-topic="Alphabet adventure"><span>🔤</span><b>Alphabet</b><small>Letters made fun</small></button><button class="quick" data-topic="A fun science discovery"><span>🚀</span><b>Little scientists</b><small>Explore the world</small></button></div>
+    </section>
+    <section id="createView" class="view hidden">
+      <div class="panel"><div class="panel-head"><div><span class="tag">✨ STORY BUILDER</span><h2>Create a new video</h2><p>Tell us a little about your idea.</p></div><span class="big-emoji">🪄</span></div>
+      <form id="storyForm">
+        <label>Video title<input id="title" placeholder="e.g. Benny Bunny Learns to Share" required></label>
+        <label>Story idea<textarea id="topic" placeholder="What should happen in your story?" required rows="3"></textarea></label>
+        <div class="form-row"><label>Age group<select id="age"><option>3–5 years</option><option>6–8 years</option><option>9–12 years</option></select></label><label>Video length<select id="duration"><option>1 minute</option><option>3 minutes</option><option>5 minutes</option></select></label></div>
+        <label>Language<select id="language"><option>English</option><option>French</option><option>Spanish</option><option>Swahili</option></select></label>
+        <button class="primary wide" type="submit">✨ Generate story script</button>
+      </form>
+      <div id="result" class="result hidden"><div class="result-head"><h3 id="resultTitle"></h3><div><button id="copyBtn" class="soft-btn">Copy</button><button id="downloadBtn" class="soft-btn">Download .txt</button><button id="saveBtn" class="soft-btn">Save story</button></div></div><pre id="scriptText"></pre></div>
+      </div>
+    </section>
+    <section id="libraryView" class="view hidden"><div class="section-head"><div><h3>Your video library</h3><p>Stories saved in this browser.</p></div><button class="primary" id="libraryCreate">＋ New story</button></div><div id="libraryList" class="library-list"></div></section>
+    <footer>Made with imagination 💛 <span>KidsTube AI Studio · Starter version</span></footer>
+  </main>
+</div>
+<script src="app.js"></script>
+</body></html>
